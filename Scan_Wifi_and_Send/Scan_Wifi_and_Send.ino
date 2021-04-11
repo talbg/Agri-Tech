@@ -95,13 +95,13 @@ void loop()
         for (int i = 0; i < n; ++i) {
             // Print SSID and RSSI for each network found
             //LoRa.print(i + 1 + ": " + WiFi.SSID(i) +" ("+WiFi.RSSI(i) + ")"+(WiFi.encryptionType(i) == WIFI_AUTH_OPEN)?" ":"*");
-            LoRa.print(WiFi.SSID(i));
+            LoRa.print(WiFi.SSID(i)+", ");
             delay(10);
         }
     }
     Serial.println("");
     // Wait a bit before scanning again
-    delay(5000);
+    delay(1000);
   //////////////////////////end wifi 
   //LoRa.print("This is packet number: ");
   //LoRa.print(counter);
